@@ -11,8 +11,8 @@ class ShortLinkController extends Controller
 {
     public function index()
     {
-        $shortLinks = ShortLink::all();
-        return view('shorten-link',[
+        $shortLinks = ShortLink::Click(10)->get();
+        return view('das',[
             'short_links' =>  $shortLinks,
         ]);
     }
